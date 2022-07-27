@@ -1,13 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>小吴</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>快坐下吧妹妹们</title>
+  <style>
+    div {
+      text-align: center;
+    }
+
+    #table {
+      width: 90%;
+
+    }
+
+    font {
+      font-size: 33px;
+      font-weight: 350;
+    }
+
+    div.at-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .at-item {
+      color: #1C1C1F;
+      animation-name: focus-in-contract;
+      animation-duration: 0.5s;
+      animation-timing-function: ease;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      /* shorthand 
+  animation: focus-in-contract 1s ease 0s 1 normal none;
+  */
+    }
+
+    @keyframes focus-in-contract {
+      0% {
+        letter-spacing: 1em;
+        filter: blur(12px);
+        opacity: 0;
+      }
+
+      100% {
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+
+
+    div.box2 {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .box22 {
+      animation-name: scale-in-center;
+      animation-duration: 0.4s;
+      animation-timing-function: ease;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      /* shorthand 
+  animation: scale-in-center 1s ease 0s 1 normal none;
+  */
+    }
+
+    @keyframes scale-in-center {
+      0% {
+        transform: scale(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+  <style>
+    body {
+      background: #FBFBFB;
+    }
+  </style>
+
 </head>
+
 <body>
-    <h1>还在制作中，请过段时间再来看看~2022.7.27 11：42</h1>
+  <div>
+    <div style="margin-top: 32px;" class="at-container at-item">
+      <font>感谢以下集美们的捐赠</font>
+    </div>
+    <p></p>
+
+    <center>真的很爱你们，郭门永存，跟我说ysml!!</center>    
+    <p></p>
+    <center>
+      <img src="./hug.gif" height="150px">
+      <p></p>
+      <div id="table">
+        <el-row>
+          <el-button type="primary" onclick="back()">回到游戏</el-button>
+          <el-button onclick="home()">小吴主页</el-button>
+        </el-row>
+        <p></p>
+        <template>
+          <el-table :data="tableData" border style="width: 100%">
+            <el-table-column prop="date" label="时间" width="160">
+            </el-table-column>
+            <el-table-column prop="name" label="姓名" >
+            </el-table-column>
+            <el-table-column prop="money" label="金额">
+            </el-table-column>
+          </el-table>
+        </template>
+      </div>
+    </center>
+
+
+
+  </div>
 </body>
+
+<script src="https://unpkg.com/vue@2.7.8/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+<script>
+  new Vue({
+    el: '#sfz',
+    data() {
+        return {
+        }
+    }
+});
+new Vue({
+    el: '#table',
+    data() {
+        return {
+            tableData: [{
+                date: '2022-07-27 12:48',
+                name: '**雪',
+                money: '1.00'
+              }, {
+                date: '2022-07-27 11:35',
+                name: '**墨',
+                money: '4.00❤'
+              },{
+                date: '2022-07-27 10:48',
+                name: '**莉',
+                money: '0.40'
+              },{
+                date: '2022-07-27 10:44',
+                name: '**航',
+                money: '1.00'
+              }, {
+                date: '2022-07-27 07:08',
+                name: '**芹',
+                money: '0.32'
+              }, {
+                date: '2022-07-27 07:04',
+                name: '**强',
+                money: '2.00'
+              }, {
+                date: '2022-07-27 01:51',
+                name: '**禹',
+                money: '0.10'
+              }, {
+                date: '2022-04-29 17:17',
+                name: '*紫',
+                money: '2.22'
+              }, {
+                date: '2022-04-07 23:24',
+                name: '**晶',
+                money: '6.66😘'
+              }, {
+                date: '2022-04-06 02:52',
+                name: '**国',
+                money: '2.22'
+              }, {
+                date: '2022-04-05 15:45',
+                name: '**松',
+                money: '2.00'
+              }, {
+                date: '2022-03-25 00:49',
+                name: '*月',
+                money: '2.20'
+              }, {
+                date: '2022-02-10 17:20',
+                name: '**容',
+                money: '5.00😝'
+              }, {
+                date: '2022-02-01 23:14',
+                name: '*丽',
+                money: '6.66😍'
+              }, {
+                date: '2022-01-26 20:31',
+                name: '**翔',
+                money: '0.25'
+              }, {
+                date: '2022-01-21 19:23',
+                name: '*欣',
+                money: '1.50'
+              },, {
+                date: '2022-01-18 14:57',
+                name: '**茹',
+                money: '0.10'
+              },, {
+                date: '2022-01-10 15:40',
+                name: '**越',
+                money: '6.00😗'
+              },, {
+                date: '2022-01-06 10:38',
+                name: '*悦',
+                money: '5.20😋'
+              },  {
+                date: '2022-01-03 03:56',
+                name: '**晶',
+                money: '0。10'
+              },  {
+                date: '2022-01-02 00:01',
+                name: '**朵',
+                money: '0.66'
+              }, {
+                date: '2022-01-01 06:20',
+                name: '**娜',
+                money: '1.66'
+              }]
+        }
+    }
+});
+function back()
+{
+    window.location.href="https://guozi.vercel.app/";
+};
+function home(){
+    window.location.href="https://siowu.github.io/";
+};
+</script>
+
 </html>
